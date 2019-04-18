@@ -1,0 +1,4 @@
+pygame==1.9.3
+virtualenv==15.1.0
+random
+logging
