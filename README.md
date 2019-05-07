@@ -1,21 +1,28 @@
-HELP MACGYVER GET OUT OF THE MAZE
+##HELP MACGYVER GET OUT OF THE MAZE (V2)
 
-This is a 2D game starring Macgyver as the main character. 
-As the player, you have to pick three items to win the level ! 
-Look out ! If do not pick all items, you can't win ! 
+#How to play ?
 
-For more informations about the game, please read the CR.pdf file
+> Install a virtual env
 
-INSTALL / How to play ?
+> Install requirements.txt
 
-1 - Open shell/console and use "Git clone" to copy all files, or Download the Zip file
+> "python main.py"
 
-2 - Open requirements.txt to know libraries to install on your virtual env
+> Enjoy !
 
-3 - (Optionnal) If you want to play with music, remove the docstrings of those two lines in mggame.py
-            (line 44)  #pygame.mixer.music.load("music/soundbay_Epic_Movie.wav")
-            (line 56)  #pygame.mixer.music.play()
-            
-4 - Once librairies intallation done, go into the directory and type "python3 mggame.py" in your shell to play the game !
+#Build with
+> Pygame
 
-5 - Look at the shell while you play, it will tell you if you lost or won the game !
+> Random
+
+> Pygame.math
+
+#About V2
+> Regarding to the initial version of the game, several functions has been added in order to increase the game play. In fact, now, the player can see his score and play again the game. Furthermore, a second maze has been created and it is displayed randomly when the game starts.
+
+#About Graphics
+> All graphics are given by OpenClassrooms in order to create the game. 
+
+
+
+
