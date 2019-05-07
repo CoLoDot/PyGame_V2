@@ -1,6 +1,6 @@
 # HELP MACGYVER GET OUT OF THE MAZE (V2)
 
-![Game Screenshot](https://github.com/CoLoDot/Pur_beurre/blob/master/screenshot_pur_beurre.png)
+![Game Screenshot](https://github.com/CoLoDot/PyGame_V2/blob/master/Documentation/game_screenshot.png)
 
 **How to play ?**
 
