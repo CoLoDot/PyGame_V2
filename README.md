@@ -1,6 +1,8 @@
-##HELP MACGYVER GET OUT OF THE MAZE (V2)
+# HELP MACGYVER GET OUT OF THE MAZE (V2)
 
-#How to play ?
+![Game Screenshot](https://github.com/CoLoDot/Pur_beurre/blob/master/screenshot_pur_beurre.png)
+
+**How to play ?**
 
 > Install a virtual env
 
@@ -10,17 +12,17 @@
 
 > Enjoy !
 
-#Build with
+**Build with**
 > Pygame
 
 > Random
 
 > Pygame.math
 
-#About V2
+**About V2**
 > Regarding to the initial version of the game, several functions has been added in order to increase the game play. In fact, now, the player can see his score and play again the game. Furthermore, a second maze has been created and it is displayed randomly when the game starts.
 
-#About Graphics
+**About Graphics**
 > All graphics are given by OpenClassrooms in order to create the game. 
 
 
