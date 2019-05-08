@@ -3,9 +3,11 @@ from pygame.math import Vector2
 
 
 class Macgyver(pygame.sprite.Sprite):
+    """Macgyver Class"""
     def __init__(self, x, y, wallsMaze):
+        """x, y = Player positions
+            wallsMaze = group of sprites"""
         pygame.sprite.Sprite.__init__(self)
-        self.win = pygame.display.get_surface().get_rect()
         self.image = pygame.image.load("images/macgyver.png")
         self.rect = self.image.get_rect(topleft=(x, y))
         self.macgyverPosition = Vector2(x, y)
@@ -13,13 +15,14 @@ class Macgyver(pygame.sprite.Sprite):
         self.walls = wallsMaze
 
     def update(self):
+        """Function to update player's position by adding velocity
+            and check collisions"""
         self.macgyverPosition += self.macgyverVelocity
-        self.detectCollisions()
+        self.playerCollisions()
 
-    def detectCollisions(self):
-        """Check if Macygyver collided walls"""
+    def playerCollisions(self):
+        """Function to check if player collides walls"""
 
-        # WALLS
         self.rect.centerx = self.macgyverPosition.x
         for wall in pygame.sprite.spritecollide(self, self.walls, False):
             if self.macgyverVelocity.x > 0:
