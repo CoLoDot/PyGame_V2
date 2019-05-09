@@ -51,14 +51,19 @@ def main():
         pick_objects = pygame.sprite.spritecollide(player, pick_sprites, True)
 
         if pick_objects:
+            pygame.mixer.Sound.play(pickingMusic).set_volume(0.2)
             pick_sprites.clear(win, back)
             score += 1
 
         if score != 3 and pygame.sprite.spritecollideany(player, enemy_sprites):
             pygame.sprite.spritecollide(player, enemy_sprites, False)
+            pygame.mixer.music.stop()
+            pygame.mixer.Sound.play(loosingMusic).set_volume(0.5)
             text = font.render('Looser ! Play again ?', 13, (0, 0, 0))
             restart(win, winWidth, winHeight, text)
         elif score == 3 and pygame.sprite.spritecollide(player, enemy_sprites, True):
+            pygame.mixer.music.stop()
+            pygame.mixer.Sound.play(winningMusic).set_volume(0.5)
             text = font.render('Winner ! Play again ?', 13, (0, 0, 0))
             restart(win, winWidth, winHeight, text)
 
