@@ -1,7 +1,7 @@
 import pygame
 
 pygame.init()
-number_of_sprite = 30
+spriteSize = 30
 back = pygame.Surface((510, 550))
 winWidth, winHeight = 510, 550
 

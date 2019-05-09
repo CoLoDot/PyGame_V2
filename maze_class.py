@@ -1,7 +1,7 @@
 import pygame
 import random
 from visuals_class import Floor, PickSafe, PickCoin, PickPotion, End, Walls
-from constants import maze_1, maze_2, number_of_sprite
+from constants import maze_1, maze_2, spriteSize
 
 class MazeCreation(pygame.sprite.Sprite):
     """Class to create a maze and display it on screen"""
@@ -28,13 +28,13 @@ class MazeCreation(pygame.sprite.Sprite):
             x = 0
             for sprite in line:
                 if sprite == '0':
-                    aSprite = Floor(x * number_of_sprite, y * number_of_sprite)
+                    aSprite = Floor(x * spriteSize, y * spriteSize)
                     self.floorSprites.add(aSprite)
                     self.allSprites.add(aSprite)
 
                     if counting_sprites > 60 and objects_to_display <= 2:
-                        x_pick = x * number_of_sprite
-                        y_pick = y * number_of_sprite
+                        x_pick = x * spriteSize
+                        y_pick = y * spriteSize
                         list_toBePicked = [PickPotion(x_pick, y_pick),
                                            PickCoin(x_pick, y_pick),
                                            PickSafe(x_pick, y_pick)]
@@ -45,12 +45,12 @@ class MazeCreation(pygame.sprite.Sprite):
                     counting_sprites += 1
 
                 elif sprite == 'm':
-                    aSprite = Walls(x * number_of_sprite, y * number_of_sprite)
+                    aSprite = Walls(x * spriteSize, y * spriteSize)
                     self.wallsSprites.add(aSprite)
                     self.allSprites.add(aSprite)
                 elif sprite == 'a':
-                    aSprite = End(x * number_of_sprite, y * number_of_sprite)
-                    backgroundSprite = Floor(x * number_of_sprite, y * number_of_sprite)
+                    aSprite = End(x * spriteSize, y * spriteSize)
+                    backgroundSprite = Floor(x * spriteSize, y * spriteSize)
                     self.enemySprites.add(aSprite)
                     self.allSprites.add(backgroundSprite, aSprite)
                 x += 1
