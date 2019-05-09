@@ -11,10 +11,10 @@ def restart(win, winWidth, winHeight, text_to_display):
     yTextPosition = winHeight / 2 - text.get_height() / 2
     widthText = text.get_width()
     heightText = text.get_height()
-    pygame.draw.rect(win, (255, 255, 255), ((xTextPosition / 2 - text.get_width() / 2, 520 - 5),
+    pygame.draw.rect(win, (255, 255, 255), ((xTextPosition, 520 - 5),
                                             (widthText + 10, heightText + 10)))
 
-    win.blit(text, (xTextPosition / 2 - text.get_width() / 2, 520))
+    win.blit(text, (xTextPosition+5, 520))
 
     pygame.display.flip()
     play_again = True
