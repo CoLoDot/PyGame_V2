@@ -1,6 +1,7 @@
 import pygame
 import sys
-from main import main
+from mainloop import main
+
 
 def restart(win, winWidth, winHeight, text_to_display):
     """Function to restart the game and display Winner or Looser on the screen"""

@@ -1,7 +1,8 @@
+import sys
 from constants import *
 from player_class import Macgyver
 from maze_class import MazeCreation
-from play_again import *
+import play_again
 
 
 def main():
@@ -60,12 +61,12 @@ def main():
             pygame.mixer.music.stop()
             pygame.mixer.Sound.play(loosingMusic).set_volume(0.5)
             text = font.render('Looser ! Play again ?', 13, (0, 0, 0))
-            restart(win, winWidth, winHeight, text)
+            play_again.restart(win, winWidth, winHeight, text)
         elif score == 3 and pygame.sprite.spritecollide(player, enemy_sprites, True):
             pygame.mixer.music.stop()
             pygame.mixer.Sound.play(winningMusic).set_volume(0.5)
             text = font.render('Winner ! Play again ?', 13, (0, 0, 0))
-            restart(win, winWidth, winHeight, text)
+            play_again.restart(win, winWidth, winHeight, text)
 
         win.blit(back, (0, 0))
         text = font.render('Score : ' + str(score), 1, (255, 255, 255))
