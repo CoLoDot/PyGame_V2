@@ -3,6 +3,7 @@ import random
 from visuals_class import Floor, PickSafe, PickCoin, PickPotion, End, Walls
 from constants import maze_1, maze_2, spriteSize
 
+
 class MazeCreation(pygame.sprite.Sprite):
     """Class to create a maze and display it on screen"""
     def __init__(self, allSprites, wallsSprites, floorSprites, enemySprites, pickSprites):
