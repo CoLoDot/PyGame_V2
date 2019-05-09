@@ -1,13 +1,17 @@
 import unittest
+import random
+from constants import *
 from pygame.math import Vector2
-from main import *
+from player_class import Macgyver
+from visuals_class import *
+
 
 
 class TestWindow(unittest.TestCase):
 
     def setUp(self):
         self.w = 510
-        self.h = 580
+        self.h = 550
 
     def test_wh(self):
         """Test if window's width and height are correct"""
@@ -69,8 +73,8 @@ class TestSurfaceCreation(unittest.TestCase):
     def setUp(self):
         self.position = Vector2(45, 45)
         self.Group = pygame.sprite.Group()
-        self.surface = Floor(self.position.x * number_of_sprite,
-                             self.position.y * number_of_sprite)
+        self.surface = Floor(self.position.x * spriteSize,
+                             self.position.y * spriteSize)
 
     def test_sprite_got_rect(self):
         """Test if a surface created got a rect"""
@@ -78,50 +82,50 @@ class TestSurfaceCreation(unittest.TestCase):
 
     def test_sprite_creation_Floor(self):
         """Test if a sprite is correctly created as a Floor instance"""
-        create_surface = Floor(self.position.x * number_of_sprite,
-                               self.position.y * number_of_sprite)
+        create_surface = Floor(self.position.x * spriteSize,
+                               self.position.y * spriteSize)
         self.Group.add(create_surface)
         self.assertTrue(create_surface)
 
     def test_sprite_creation_End(self):
         """Test if a sprite is correctly created as an End instance"""
-        create_surface = End(self.position.x * number_of_sprite,
-                             self.position.y * number_of_sprite)
+        create_surface = End(self.position.x * spriteSize,
+                             self.position.y * spriteSize)
         self.Group.add(create_surface)
         self.assertTrue(create_surface)
 
     def test_sprite_creation_PickPotion(self):
         """Test if a sprite is correctly created as a PickPotion instance"""
-        create_surface = PickPotion(self.position.x * number_of_sprite,
-                                    self.position.y * number_of_sprite)
+        create_surface = PickPotion(self.position.x * spriteSize,
+                                    self.position.y * spriteSize)
         self.Group.add(create_surface)
         self.assertTrue(create_surface)
 
     def test_sprite_creation_PickCoin(self):
         """Test if a sprite is correctly created as a PickCoin instance"""
-        create_surface = PickCoin(self.position.x * number_of_sprite,
-                                  self.position.y * number_of_sprite)
+        create_surface = PickCoin(self.position.x * spriteSize,
+                                  self.position.y * spriteSize)
         self.Group.add(create_surface)
         self.assertTrue(create_surface)
 
     def test_sprite_creation_PickSafe(self):
         """Test if a sprite is correctly created as a PickSafe instance"""
-        create_surface = PickSafe(self.position.x * number_of_sprite,
-                                  self.position.y * number_of_sprite)
+        create_surface = PickSafe(self.position.x * spriteSize,
+                                  self.position.y * spriteSize)
         self.Group.add(create_surface)
         self.assertTrue(create_surface)
 
     def test_sprite_creation_Walls(self):
         """Test if a sprite is correctly created as a Walls instance"""
-        create_surface = Walls(self.position.x * number_of_sprite,
-                               self.position.y * number_of_sprite)
+        create_surface = Walls(self.position.x * spriteSize,
+                               self.position.y * spriteSize)
         self.Group.add(create_surface)
         self.assertTrue(create_surface)
 
     def test_sprite_creation_Player(self):
         """Test if a sprite is correctly created as a Macgyver instance"""
-        create_surface = Macgyver(self.position.x * number_of_sprite,
-                                  self.position.y * number_of_sprite,
+        create_surface = Macgyver(self.position.x * spriteSize,
+                                  self.position.y * spriteSize,
                                   wallsMaze=self.Group)
         self.assertTrue(create_surface)
 
