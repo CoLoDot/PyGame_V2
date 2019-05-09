@@ -4,7 +4,7 @@ from visuals_class import Floor, PickSafe, PickCoin, PickPotion, End, Walls
 from constants import maze_1, maze_2, number_of_sprite
 
 class MazeCreation(pygame.sprite.Sprite):
-
+    """Class to create a maze and display it on screen"""
     def __init__(self, allSprites, wallsSprites, floorSprites, enemySprites, pickSprites):
         pygame.sprite.Sprite.__init__(self)
         self.mazeList = [maze_1, maze_2]
