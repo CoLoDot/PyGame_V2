@@ -60,7 +60,6 @@ def main():
             text = font.render('Winner ! Play again ?', 13, (0, 0, 0))
             restart(win, winWidth, winHeight, text)
 
-
         win.blit(back, (0, 0))
         text = font.render('Score : ' + str(score), 1, (255, 255, 255))
         win.blit(text, (winWidth / 2 - text.get_width() / 2, 520))
