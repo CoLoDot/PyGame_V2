@@ -6,6 +6,7 @@ from play_again import *
 
 def main():
     """Main Loop of the game"""
+    pygame.mixer.music.play(-1)
     win = pygame.display.set_mode((winWidth, winHeight))
     score = 0
     pygame.display.set_caption('Macgyver')
