@@ -4,7 +4,10 @@ pygame.init()
 spriteSize = 30
 winWidth, winHeight = 510, 550
 back = pygame.Surface((winWidth, winHeight))
-music = pygame.mixer.music.load("music/soundbay_Epic_Movie.wav")
+backgroundMusic = pygame.mixer.music.load("music/soundbay_Epic_Movie.wav")
+winningMusic = pygame.mixer.Sound("music/Short_triumphal_fanfare-John_Stracke-815794903.wav")
+pickingMusic = pygame.mixer.Sound("music/Ta Da-SoundBible.com-1884170640.wav")
+loosingMusic = pygame.mixer.Sound("music/Hl2_Rebel-Ragdoll485-573931361.wav")
 
 maze_1 = ("mmmmmmmmmmmmmmmmm\n"
           "m0000mmm0000mm0mm\n"
