@@ -69,7 +69,7 @@ def main():
             play_again.restart(win, winWidth, winHeight, text)
 
         win.blit(back, (0, 0))
-        text = font.render('Score : ' + str(score), 1, (255, 255, 255))
+        text = font.render('Score : ' + str(score) + ' / 3', 1, (255, 255, 255))
         win.blit(text, (winWidth / 2 - text.get_width() / 2, 520))
         all_sprites.update()
         all_sprites.draw(win)
