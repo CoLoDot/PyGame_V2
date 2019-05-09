@@ -1,6 +1,6 @@
 # HELP MACGYVER GET OUT OF THE MAZE (V2)
 
-![Game Screenshot](https://github.com/CoLoDot/PyGame_V2/blob/master/Documentation/game_screenshot.png)
+![Game Screenshot](https://github.com/CoLoDot/PyGame_V2/blob/master/Documentation/screenshot.png)
 
 **How to play ?**
 
