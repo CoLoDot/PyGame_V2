@@ -1,11 +1,9 @@
 import pygame
 
 pygame.init()
-size_sprite = 15
 number_of_sprite = 30
-window_size = size_sprite * number_of_sprite
-back = pygame.Surface((510, 580))
-winWidth, winHeight = 510, 580
+back = pygame.Surface((510, 550))
+winWidth, winHeight = 510, 550
 
 maze_1 = ("mmmmmmmmmmmmmmmmm\n"
           "m0000mmm0000mm0mm\n"
